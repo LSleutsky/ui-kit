@@ -1,14 +1,14 @@
-import React from 'react';
-import { Button as NativeButton } from '@rneui/themed';
+import React from "react";
+import { Button as NativeButton } from "@rneui/themed";
 
 export type ButtonProps = {
   buttonStyle?: object;
   containerStyle?: object;
   icon?: object;
-  iconPosition?: 'left' | 'right' | 'top' | 'bottom';
+  iconPosition?: "left" | "right" | "top" | "bottom";
   onPress?: () => void;
   radius?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
   title: string;
   titleStyle?: object;
   uppercase?: boolean;
@@ -18,19 +18,19 @@ export const Button = ({
   buttonStyle,
   containerStyle,
   icon,
-  iconPosition = 'left',
+  iconPosition = "left",
   onPress,
   radius,
   size,
   title,
   titleStyle,
-  uppercase = false
+  uppercase = false,
 }: ButtonProps) => (
   <NativeButton
     buttonStyle={buttonStyle}
     containerStyle={containerStyle}
     icon={icon}
-    iconPosition={icon && iconPosition}
+    iconPosition={icon ? iconPosition : undefined}
     onPress={onPress}
     radius={radius}
     size={size}

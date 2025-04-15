@@ -2,14 +2,11 @@
   "name": "ui-kit",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/bundle.esm.js",
-      "require": "./dist/bundle.cjs.js"
-    }
-  },
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "expo start",
@@ -89,10 +86,8 @@
     "vite": "^6.0.11"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-native-ratings": ">=8.1.0",
-    "react-native-safe-area-context": "^3.3.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "resolutions": {
     "metro": "0.82.1",
@@ -101,6 +96,5 @@
   },
   "overrides": {
     "react-docgen-typescript": "2.2.2"
-  },
-  "private": true
+  }
 }
