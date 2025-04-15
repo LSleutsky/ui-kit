@@ -38,3 +38,5 @@ export const Button = ({
     titleStyle={titleStyle}
   />
 );
+
+export default Button;
